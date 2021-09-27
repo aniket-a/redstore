@@ -7,23 +7,30 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>red-store</title>
+    <link rel="stylesheet" href="index.js">
 </head>
 <body>
-    <h1 style="padding: 14px; margin: 8px;"> Red-Store</h1>
+
     
-    <div id="navigation">
-        <div id="manu">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
-        </div>
-        <ul class="nav" id="nav">
-            <li><a href="">HOME</a></li>
-            <li><a href="">ACCOUNT</a></li>
-            <li><a href="">SHOP NOW</a></li>
-            <li><a href="">PROFILE</a></li>
+    <nav>
+        <div class="logo"><h1> <span style="color: crimson;">Red</span><span style="color: black;">-</span>store</h1></div>
+        <div class="openMenu"><i class="fas fa-bars"></i></div>
+        <ul class="mainMenu">
+         <li><a href="">HOME</a></li>
+         <li><a href="">PROFILE</a></li>
+         <li><a href="">SHOP NOW</a></li>
+         <li><a href="">ACCOUNT</a></li>
+         <div class="closeMenu"><i class="fas fa-times"></i></div>
+         <span class="icons">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-github-square"></i>
+            <i class="fab fa-twitter"></i>
+         </span>
         </ul>
-    </div>
+    </nav>
+
+
     <div class="container">  
         
          
@@ -88,20 +95,40 @@
     }
 </script>
 
+
+<script>
+ 
+ const openMenu = document.querySelector(".openMenu");
+const mainMenu = document.querySelector(".mainMenu");
+const closeMenu = document.querySelector(".closeMenu");
+
+openMenu.addEventListener("click",show);
+closeMenu.addEventListener("click",close);
+
+function show(){
+    mainMenu.style.display = 'flex';
+    mainMenu.style.top = '0';
+}
+
+function close(){
+        mainMenu.style.top = '-100%';
+}
+
+
+</script>
+
 <center>
 <footer>
   
     <div class="foot">
         <img src="nikeicone.png" class="nike">
-        <p> Made with<span><</span> <span>/</span><span>></span> by Aniket gupta  </p>
+        <p> Made with<span> <</span><span>/</span><span>> </span>by Aniket gupta</p>
         <i class="fab fa-github"></i>
         <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook-square"></i> 
-      
+        <i class="fab fa-facebook-square"></i>
     </div>
-</center>
-
-</body>
-
+    <br><br>
 </footer>
+</center>
+</body>
 </html>
